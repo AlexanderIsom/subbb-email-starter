@@ -179,8 +179,8 @@ SubbbInviteUserEmail.PreviewProps = {
 	userImage: `${baseUrl}/static/jacob-subbb.jpeg`,
 	SubbbClub: "Jacob's Dev Club",
 	discordLink: "https://discord.com/invite/foo",
-	// telegramLink: "https://t.me/foo",
-	// whatsappLink: "https://wa.me/foo",
+	telegramLink: "https://t.me/foo",
+	whatsappLink: "https://wa.me/foo",
 	slackLink: "https://slack.com/foo",
 	manageSubscriptionsLink: `${baseUrl}/request-token`,
 } as SubbbInviteUserEmailProps;
