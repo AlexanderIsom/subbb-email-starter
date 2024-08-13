@@ -35,6 +35,7 @@ interface SubbbInviteUserEmailProps {
 	slackLink?: string;
 	whatsappLink?: string;
 	telegramLink?: string;
+	manageSubscriptionsLink: string;
 }
 
 export const SubbbInviteUserEmail = ({
@@ -44,6 +45,7 @@ export const SubbbInviteUserEmail = ({
 	slackLink,
 	whatsappLink,
 	telegramLink,
+	manageSubscriptionsLink,
 }: SubbbInviteUserEmailProps) => {
 	const previewText = `Welcome to ${SubbbClub} on Subbb!`;
 
@@ -160,7 +162,11 @@ export const SubbbInviteUserEmail = ({
 							</a>
 						</Section>
 						<Text className="text-black text-center text-[14px] leading-[24px]">
-							Thanks for becoming part of the Subbb community!
+							Thanks for becoming part of a Subbb community!
+						</Text>
+						<Text className="text-black text-center text-[14px] leading-[24px]">
+							To manage and view your subscriptions click{" "}
+							<Link href={manageSubscriptionsLink}>here</Link>
 						</Text>
 					</Container>
 				</Body>
@@ -173,9 +179,10 @@ SubbbInviteUserEmail.PreviewProps = {
 	userImage: `${baseUrl}/static/jacob-subbb.jpeg`,
 	SubbbClub: "Jacob's Dev Club",
 	discordLink: "https://discord.com/invite/foo",
-	telegramLink: "https://t.me/foo",
-	whatsappLink: "https://wa.me/foo",
+	// telegramLink: "https://t.me/foo",
+	// whatsappLink: "https://wa.me/foo",
 	slackLink: "https://slack.com/foo",
+	manageSubscriptionsLink: `${baseUrl}/request-token`,
 } as SubbbInviteUserEmailProps;
 
 export default SubbbInviteUserEmail;
